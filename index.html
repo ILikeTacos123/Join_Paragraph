@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <title>Making Paragraphs</title>
+</head>
+
+<body>
+
+    <h1>Making Paragraphs From Input Boxes Using Join Function</h1>
+    <br>
+
+        <div>
+            <span>1. </span>
+            <input type="text" id="para1_input_box_1" placeholder="Input Box 1">
+            <br> <br>
+            <span>2. </span>
+            <input type="text" id="para1_input_box_2" placeholder="Input Box 2">
+            <br> <br>
+            <span>3. </span>
+            <input type="text" id="para1_input_box_3" placeholder="Input Box 3">
+            <br> <br>
+            <span>4. </span>
+            <input type="text" id="para1_input_box_4" placeholder="Input Box 4">
+            <br> <br>
+            <span>5. </span>
+            <input type="text" id="para1_input_box_5" placeholder="Input Box 5">
+            <br> <br>
+            <span>6. </span>
+            <input type="text" id="para1_input_box_6" placeholder="Input Box 6">
+            <br> <br>
+            <button onclick="getparah1()">Get Paragraph 1</button>
+        </div>
+    <br> <br>
+        <div>
+            <span>1. </span>
+            <input type="text" id="para2_input_box_1" placeholder="Input Box 1">
+            <br> <br>
+            <span>2. </span>
+            <input type="text" id="para2_input_box_2" placeholder="Input Box 2">
+            <br> <br>
+            <span>3. </span>
+            <input type="text" id="para2_input_box_3" placeholder="Input Box 3">
+            <br> <br>
+            <span>4. </span>
+            <input type="text" id="para2_input_box_4" placeholder="Input Box 4">
+            <br> <br>
+            <span>5. </span>
+            <input type="text" id="para2_input_box_5" placeholder="Input Box 5">
+            <br> <br>
+            <span>6. </span>
+            <input type="text" id="para2_input_box_6" placeholder="Input Box 6">
+            <br> <br>
+            <button onclick="getparah2()">Get Paragraph 2</button>
+        </div>
+        
+        <br><br>
+
+    <div id="showParah1"></div>
+    <br><br>
+    <div id="showParah2"></div>
+
+    <script>
+
+        var inputs1 = [];
+
+        function getparah1() {
+            for (var i=1 ; i <= 6; i++) {
+                inputs1.push(document.getElementById("para1_input_box_" + i).value);
+                inputs1.join(". ");
+            }
+
+            document.getElementById("showParah1").innerHTML = inputs1.join(". ");
+            console.log(inputs1);
+        }
+
+        var inputs2 = [];
+
+        function getparah2() {
+            for (var j=1 ; j <= 6; j++) {
+                inputs2.push(document.getElementById("para2_input_box_" + j).value);
+                inputs2.join(". ");
+            }
+            
+            document.getElementById("showParah2").innerHTML = inputs2.join(". ");
+            console.log(inputs2);
+        }
+    </script>
+
+</body>
+
+</html>
